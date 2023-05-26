@@ -6,7 +6,7 @@ const pool = mysql.createPool({
   database: "server_actions",
 });
 
-export async function query<TResponse extends ResultSetHeader>(query: string) {
+export async function query<TResponse>(query: string) {
   return new Promise<TResponse>((resolve, reject) => {
     pool.getConnection((err, connection) => {
       if (err) {

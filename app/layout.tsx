@@ -1,7 +1,11 @@
 import "./globals.css";
 import { Space_Mono } from "next/font/google";
 
-const spaceMono = Space_Mono({ subsets: ["latin"], weight: ["400", "700"] });
+const spaceMono = Space_Mono({
+  subsets: ["latin"],
+  weight: ["400", "700"],
+  display: "auto",
+});
 
 export const metadata = {
   title: "Server Actions in Next JS",
@@ -15,7 +19,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={spaceMono.className}>{children}</body>
+      <body className={spaceMono.className}>
+        <h1 className="text-3xl p-[1rem] text-center font-bold">
+          Server Actions in Next JS
+        </h1>
+        {children}
+      </body>
     </html>
   );
 }

@@ -1,5 +1,5 @@
 import Image from "next/image";
-import CreateUser from "./Form";
+import CreateUser from "./CreateUser";
 
 export default function Home() {
   return (
