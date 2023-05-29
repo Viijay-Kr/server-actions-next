@@ -35,6 +35,7 @@ export default async function UserPage({ params }: { params: { id: string } }) {
       revalidatePath(`/user/${params.id}`);
     }
   };
+  console.log(user.topics);
   return (
     <div className="flex flex-col px-[4rem]">
       <h2>Name: {user.name}</h2>
