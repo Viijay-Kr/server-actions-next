@@ -8,9 +8,7 @@ export const deleteUser = async (id: number) => {
   const result = await query<{ affectedRows: number }>(
     `DELETE FROM users WHERE id=${id}`
   );
-  if (result.affectedRows) {
-    redirect("/");
-  }
+  return result.affectedRows;
 };
 
 export const addTopicsToUser = async (topics: string, id: number) => {
