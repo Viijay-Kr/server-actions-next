@@ -1,4 +1,3 @@
-import CreateUserForm from "./CreateUserForm";
 import { query } from "./db";
 import { redirect } from "next/navigation";
 
